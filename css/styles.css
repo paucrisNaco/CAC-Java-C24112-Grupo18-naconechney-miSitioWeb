@@ -1,0 +1,185 @@
+/*Tipografía*/
+.sedan-regular{
+  font-family: "Sedan", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.sedan-regular-italic{
+  font-family: "Sedan", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/*Estilo del sitio*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Estilo del cuerpo*/
+body{
+  background-color: #C6F2FD;
+  font-family: "Sedan", serif;
+  font-style: normal;
+  color: #050A1E;
+}
+
+/*Estilo del encabezado y la barra de navegación*/
+.header{
+  background-color: #0A2E89;
+  height: 10vh;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  font-family: "Sedan", serif;
+
+  .navegación{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    .anclaLogo{
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      margin-left: 15px;
+      font-size: 1.2rem;
+      text-decoration: none;
+
+      .marca{
+        font-style: italic;
+        align-items: center;
+        color: white;
+        margin-left: 10px;
+        font-weight: 500;
+      }
+    }
+
+    .listaNav{
+      list-style: none;
+      display: flex;
+      align-items: center;
+      font-style: normal;
+
+      .listaItem{
+        margin-right: 20px;
+
+        .linkNav{
+          font-size: 1.1 rem;
+          padding: 0.5 rem 1 rem;
+          color: white;
+          text-decoration: none;
+          font-weight: 600;
+          border: 10px solid transparent;
+
+          transition: transform 0.3s, box-shadow 0.3s;
+
+          &:hover{
+            transform: scale(0.95);
+            box-shadow: 0 0 20px rgba(62, 212, 235, 0.9);
+            border-radius: 5px;
+          
+          /* Cambiar el color de fondo cuando el enlace está activo */
+          &:active {
+            background-color: #3ED4EB;
+            color: #050A1E; /
+          }
+          }
+        }
+
+        .linkNav.iniciarSesion{
+          background-color: #3ED4EB;
+          color: #050A1E;
+          border-radius: 5px;
+        }
+
+      }
+    }
+  }
+}
+
+/*Estilos para diseño responsive*/
+@media (max-width: 768px){
+  
+  .header{
+    height: 12vh;
+
+    .navegación{
+      display: flex;
+      margin-left: 10px;
+      margin-right: 10px;
+      flex-direction: column;
+      row-gap: 20px;
+      align-items: center;
+    }
+  }
+}
+
+/*Estilos del main, título y subtítulo*/
+.main{
+  .sectionPrincipal{
+    color: white;
+    background: linear-gradient(to right top, #0000008a, #0000008a), url(../img/brand1.png);
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .tituloPrincipal{
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .subtituloPrincipal{
+      font-size: 2.2rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    .descripcionBottom{
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+
+    a{
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 100%;
+      background-color:#0A2E89;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      margin-right: 10px; /* Espacio entre botones */
+    }
+  }
+}
+
+/*
+.cotizacionBlue{
+  width:320px;
+  height:260px;
+  border-radius:10px;
+  box-shadow:2px 4px 4px rgb(0 0 0 / 25%);
+  display:flex;
+  justify-content:center;
+  border:1px solid #bcbcbc;
+}
+
+.cotizacionOficial{
+  width:320px;
+  height:260px;
+  border-radius:10px;
+  box-shadow:2px 4px 4px rgb(0 0 0 / 25%);
+  display:flex;
+  justify-content:center;
+  border:1px solid #bcbcbc;
+}*/
