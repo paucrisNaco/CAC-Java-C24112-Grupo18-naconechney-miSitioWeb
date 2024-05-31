@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--título de la página-->
+        <title>Pen & Paper Passion</title>
+        <!--favicon-->
+        <link rel="icon" type="image/x-icon" href="img\iconoSinFondo.ico">
+        <!--hoja de estilos-->
+        <link rel="stylesheet" href="css\styles.css">
+        <!--tipografías-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!--Encabezado y barra de navegación-->
+        <header class="header">
+            <nav class="navegación">
+                <a href="index.html" class="anclaLogo">
+                    <img src="img\logo60x60SF.png" alt="Logo de la marca">
+                    <span class="marca">Pen & Paper Passion</span>
+                </a>
+                <ul class="listaNav">
+                    <li class="listaItem"><a href="blog.html" class="linkNav">Blog</a></li>
+                    <li class="listaItem"><a href="nuestrosProductos.html" class="linkNav">Nuestros Productos</a></li>
+                    <li class="listaItem"><a href="sobreNosotros.html" class="linkNav">Sobre Nosotros</a></li>
+                    <li class="listaItem"><a href="formContacto.html" class="linkNav" id="contactoEnlace">Contáctanos</a></li>
+                    <li class="listaItem"><a href="registrarse.html" class="linkNav">Registrate</a></li>
+                    <li class="listaItem"><a href="inicioSesion.html" class="linkNav iniciarSesion">Inicia Sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--Sección principal-->
+        <main id="main" class="main">
+            <section class="secPrinc">
+                <h1 class="tituloPrincipal">Formulario de Contacto</h1>
+                <form id="formularioContacto" class="form">
+                    <div class="form-row">
+                        <label for="nombre">Nombre:<span class="asterisco">*</span></label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Andrés Sánchez" required>
+                        <span id="errorNombre" class="mensaje-error"></span>
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email:<span class="asterisco">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="example@correo.com" required>
+                        <span id="errorEmail" class="mensaje-error"></span>
+                    </div>
+                    <div class="form-row">
+                        <label for="asunto">Asunto:<span class="asterisco">*</span></label>
+                        <input type="text" id="asunto" name="asunto" placeholder="Motivo de tu nota" required>
+                        <span id="errorAsunto" class="mensaje-error"></span>
+                    </div>
+                    <label for="mensaje">Mensaje:<span class="asterisco">*</span></label>
+                    <textarea id="mensaje" name="mensaje" required maxlength="500" placeholder="Escribe tus pensamientos, consultas o sugerencias aquí..."></textarea>
+                    <span id="errorMensaje" class="mensaje-error"></span>
+                    <div id="caracteresRestantes">500 caracteres restantes</div>
+                    <button type="submit">Enviar</button>
+                    <div id="mensajeConfirmacion" class="mensaje-confirmacion"></div>
+                    <p class="descripcionAsterisco"> - Los campos * son obligatorios - </p>
+                </form>
+            </section>
+        </main>
+                
+        <footer>
+            <small>© 2020 <code translate="no">Pen & Paper Passion. Anota tus sueños.</span></code>
+        </footer>
+
+        <!--Script para conectar el archivo javascript-->
+        <script src="js/contacto.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Título de la página-->
+        <title>Pen & Paper Passion</title>
+        <!--Favicon-->
+        <link rel="icon" type="image/x-icon" href="img\iconoSinFondo.ico">
+        <!--hoja de estilos-->
+        <link rel="stylesheet" href="css\styles.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+        <!--Tipografías-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+        <!--Iconos de redes sociales-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <!--Encabezado y barra de navegación-->
+        <header class="header">
+            <nav class="navegación">
+                <a href="index.html" class="anclaLogo">
+                    <img src="img\logo60x60SF.png" alt="Logo de la marca">
+                    <span class="marca">Pen & Paper Passion</span>
+                </a>
+                <ul class="listaNav">
+                    <li class="listaItem"><a href="blog.html" class="linkNav">Blog</a></li>
+                    <li class="listaItem"><a href="nuestrosProductos.html" class="linkNav">Nuestros Productos</a></li>
+                    <li class="listaItem"><a href="sobreNosotros.html" class="linkNav">Sobre Nosotros</a></li>
+                    <li class="listaItem"><a href="formContacto.html" class="linkNav" id="contactoEnlace">Contáctanos</a></li>
+                    <li class="listaItem"><a href="registrarse.html" class="linkNav">Registrate</a></li>
+                    <li class="listaItem"><a href="inicioSesion.html" class="linkNav iniciarSesion">Inicia Sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--Sección principal-->
+        <main id="main" class="mainR">
+            <section data-aos="zoom-in" data-aos-duration="1000" class="sectionRegistrarse">
+                <!--pongo get ya que en github pages da error el method post-->
+                <form action="" method="get">
+                    <h2 class="tituloRegistro">Registrate</h2>
+                    <div>
+                        <input type="text" placeholder="Nombre Completo" id="nombre" name="Nombre">
+                        <div class="error-text"></div>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Email" id="email" name="email">
+                        <div class="error-text"></div>
+                    </div>
+                    <div>
+                        <input type="password" placeholder="Contraseña" id="password" name="password">
+                        <div class="error-text"></div>
+                    </div>
+                    <h4>¿Quieres ser lector o publicador?</h4>
+                    <div class="perfiles">
+                        <input type="radio" id="lector" name="perfil" class="custom-radio">
+                        <label for="lector" class="textoPerfil">Lector</label>
+                        <input type="radio" id="publicador" name="perfil" class="custom-radio">
+                        <label for="publicador" class="textoPerfil">Publicador</label>
+                        <div class="error-text"></div>
+                    </div>
+                    <div class="terminos">
+                        <input type="checkbox" id="aceptoTerminos" name="aceptoTerminos" class="custom-checkbox">
+                        <label for="aceptoTerminos" class="textoCheck">Acepto los términos y condiciones</label>
+                        <div class="error-text"></div>
+                    </div>
+                    <div>
+                        <input class="boton" type="submit" value="Registrarme">
+                    </div>
+                    <div>
+                        <p>ó</p>
+                        <a id="inicioS" class="inicioS" href="inicioSesion.html">Inicia Sesión</a>
+                    </div>
+                </form>
+            </section>
+        </main>    
+        <footer>
+            <small>© 2020 <code translate="no">Pen & Paper Passion. Anota tus sueños.</span></code>
+        </footer>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="js/registro.js"></script>
+    </body>
+</html>

@@ -3,16 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--título de la página-->
+        <!--Título de la página-->
         <title>Pen & Paper Passion</title>
-        <!--favicon-->
+        <!--Favicon-->
         <link rel="icon" type="image/x-icon" href="img\iconoSinFondo.ico">
         <!--hoja de estilos-->
         <link rel="stylesheet" href="css\styles.css">
-        <!--tipografías-->
+        <!--Tipografías-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+        <!--Iconos de redes sociales-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     </head>
     <body>
         <!--Encabezado y barra de navegación-->
@@ -24,21 +26,98 @@
                 </a>
                 <ul class="listaNav">
                     <li class="listaItem"><a href="blog.html" class="linkNav">Blog</a></li>
-                    <li class="listaItem"><a href="#" class="linkNav">Nuestros Productos</a></li>
-                    <li class="listaItem"><a href="#" class="linkNav">Sobre Nosotros</a></li>
-                    <li class="listaItem"><a href="#" class="linkNav">Contáctanos</a></li>
-                    <li class="listaItem"><a href="#" class="linkNav">Registrate</a></li>
-                    <li class="listaItem"><a href="#" class="linkNav iniciarSesion">Inicia Sesión</a></li>
+                    <li class="listaItem"><a href="nuestrosProductos.html" class="linkNav">Nuestros Productos</a></li>
+                    <li class="listaItem"><a href="sobreNosotros.html" class="linkNav">Sobre Nosotros</a></li>
+                    <li class="listaItem"><a href="formContacto.html" class="linkNav" id="contactoEnlace">Contáctanos</a></li>
+                    <li class="listaItem"><a href="registrarse.html" class="linkNav">Registrate</a></li>
+                    <li class="listaItem"><a href="inicioSesion.html" class="linkNav iniciarSesion">Inicia Sesión</a></li>
                 </ul>
             </nav>
         </header>
 
         <!--Sección principal-->
         <main id="main" class="main">
-        </main>  
-          
+            <section class="sectionBlog">
+                <img alt="imagen de portada de la sección blog" src="img/portadaBlog.png">
+                <section class="fila1">
+                    <nav>
+                        <ul class="listaBlog">
+                            <li class="listaItem"><a href="blog.html" class="linkNav">Inicio</a></li>
+                            <li class="listaItem"><a href="#" class="linkNav">Destacados</a></li>
+                            <li class="listaItem"><a href="#" class="linkNav">Consejos</a></li>
+                            <li class="listaItem"><a href="#" class="linkNav">Manualidades</a></li>
+                            <li class="listaItem"><a href="#" class="linkNav">Libretas</a></li>
+                            <li class="listaItem"><a href="#" class="linkNav">Otros</a></li>
+                            <li class="listaItem"><a href="#" class="linkNav">Acerca de</a></li>
+                            <li class="listaItem"><a href="#" class="linkNav linkMisEntradas">Mis entradas</a></li>
+                            <li class="listaItem"><a href="#" class="linkNav linkNuevaEntrada">Nueva entrada</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="fila2">
+                    <div class="entradaDestacada">
+                        <h2>Entrada Destacada</h2>
+                        <img src="img/entradaDestacada.png" alt="Imagen de la entrada destacada" id="imagenDestacada">
+                        <p id="resumenDestacada">Este es un resumen de la entrada destacada...</p>
+                        <button id="verMasDestacada">Ver más</button>
+                    </div>
+                    <div class="info">
+                        <h4>¿Querés ser publicador?</h4>
+                        <img alt="cuaderno de notas" src="">
+                        <a id="" href="">Contactanos</a>
+                    </div>
+                </section>
+                <section class="fila3">
+                    <section class="columna1">
+                        <div class="">
+                            <!-- Contenido de la columna 1 (Archivos, seguidores, etc.) -->
+                            <h5>Contenido de la columna 1</h5>
+                            <h6>Archivos</h6>
+                            <li class="listaItem linkNav seguidores" style="display: none;"><a href="#">Seguidores</a></li>
+                            <li class="listaItem linkNav notificaciones" style="display: none;"><a href="#">Notificaciones</a></li>
+                            <li class="listaItem linkNav commentSection" style="display: none;"><a href="#">Comentarios</a></li>
+                            <img src="" alt="foto del perfil del usuario" class="linkNav miPerfil" style="display: none;">
+                            <li class="listaItem linkNav miPerfil" style="display: none;"><a href="#">Mi perfil</a></li>
+                        </div>
+                    </section>
+                    <section class="columna2">
+                        <div class="contenedorEntradas"> <!-- El contenedor debe estar vacío ya que se traerán los datos desde la base de datos-->
+                            <!-- Ejemplos para la parte visual de las entradas-->
+                            <!-- Entrada 1 -->
+                            <div class="entrada">
+                                <h3>Entrada Reciente 1</h3>
+                                <p>Resumen de la entrada reciente 1...</p>
+                                <button>Leer más</button>
+                            </div>
+                            <!-- Entrada 2 -->
+                            <div class="entrada">
+                                <h3>Entrada Reciente 2</h3>
+                                <p>Resumen de la entrada reciente 2...</p>
+                                <button>Leer más</button>
+                            </div>
+                            <!-- Entrada 3 -->
+                            <div class="entrada">
+                                <h3>Entrada Reciente 3</h3>
+                                <p>Resumen de la entrada reciente 3...</p>
+                                <button>Leer más</button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="columna3">
+                        <!-- Columna 3 -->
+                        <div class="">
+                            <!-- Contenido de la columna 3 (Barra de búsqueda, menú) -->
+                            <h5>Contenido de la columna 3</h5>
+                            <navbar>Serch</navbar>
+                            <h6>Menú del sitio</h6>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </main>    
         <footer>
             <small>© 2020 <code translate="no">Pen & Paper Passion. Anota tus sueños.</span></code>
         </footer>
+        <script src="js/blog.js"></script>
     </body>
 </html>

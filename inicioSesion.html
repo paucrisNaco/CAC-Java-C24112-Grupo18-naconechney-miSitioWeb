@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Título de la página-->
+        <title>Pen & Paper Passion</title>
+        <!--Favicon-->
+        <link rel="icon" type="image/x-icon" href="img\iconoSinFondo.ico">
+        <!--hoja de estilos-->
+        <link rel="stylesheet" href="css\styles.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+        <!--Tipografías-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+        <!--Iconos de redes sociales-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <!--Encabezado y barra de navegación-->
+        <header class="header">
+            <nav class="navegación">
+                <a href="index.html" class="anclaLogo">
+                    <img src="img\logo60x60SF.png" alt="Logo de la marca">
+                    <span class="marca">Pen & Paper Passion</span>
+                </a>
+                <ul class="listaNav">
+                    <li class="listaItem"><a href="blog.html" class="linkNav">Blog</a></li>
+                    <li class="listaItem"><a href="nuestrosProductos.html" class="linkNav">Nuestros Productos</a></li>
+                    <li class="listaItem"><a href="sobreNosotros.html" class="linkNav">Sobre Nosotros</a></li>
+                    <li class="listaItem"><a href="formContacto.html" class="linkNav" id="contactoEnlace">Contáctanos</a></li>
+                    <li class="listaItem"><a href="registrarse.html" class="linkNav">Registrate</a></li>
+                    <li class="listaItem"><a href="inicioSesion.html" class="linkNav iniciarSesion">Inicia Sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--Sección principal-->
+        <main id="main" class="mainIC">
+            <section data-aos="zoom-in" data-aos-duration="1000" class="sectionInicioSesion">
+                <!--pongo get ya que en github pages da error el method post-->
+                <form action="" method="get">
+                    <h2 class="tituloInicioSesion">Inicia Sesión</h2>
+                    <div>
+                        <input type="text" placeholder="Email" id="email" name="email">
+                        <div class="error-text"></div>
+                    </div>
+                    <div>
+                        <input type="password" placeholder="Contraseña" id="password" name="password">
+                        <div class="error-text"></div>
+                    </div>
+                    <div class="recordarme">
+                        <input type="checkbox" id="rememberMe" name="rememberMe" class="custom-checkbox">
+                        <label for="rememberMe" class="textoCheck">Recordar nombre de usuario</label>
+                    </div>
+                    <div>
+                        <input class="boton" type="submit" value="Iniciar Sesión">
+                    </div>
+                    <div>
+                        <a id="forgotPassword" class="forgotPassword" href="olvidarContrasena.html">Olvidé mi contraseña</a>
+                    </div>
+                    <div class="mensjRecu" id="mensajeRecuperacion" style="display: none;">Se te ha enviado un correo electrónico con instrucciones para restablecer tu contraseña.</div>
+                    <div>
+                        <label for="registro">¿No tienes una cuenta?</label>
+                        <a id="registro" class="registro" href="registrarse.html">Registrate</a>
+                    </div>
+                </form>
+            </section>
+        </main>    
+        <footer>
+            <small>© 2020 <code translate="no">Pen & Paper Passion. Anota tus sueños.</span></code>
+        </footer>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="js/login.js"></script>
+    </body>
+</html>

@@ -116,7 +116,7 @@ body{
   }
 }
 
-/*Estilos del main, título y subtítulo*/
+/*Estilos del main, título y subtítulo del index*/
 .main{
   .sectionPrincipal{
     color: white;
@@ -150,36 +150,752 @@ body{
 
     a{
       display: inline-block;
-      width: 50px;
-      height: 50px;
-      line-height: 50px;
+      justify-content: space-between;
+      align-content: center;
+      align-items: center;
+      width: 180px;
+      height: 180px;
       border-radius: 100%;
       background-color:#0A2E89;
       color: white;
       text-decoration: none;
       text-align: center;
-      margin-right: 10px; /* Espacio entre botones */
+      font-size: 1.2rem;
+      margin: 0 40px;
     }
   }
 }
 
-/*
-.cotizacionBlue{
-  width:320px;
-  height:260px;
-  border-radius:10px;
-  box-shadow:2px 4px 4px rgb(0 0 0 / 25%);
-  display:flex;
-  justify-content:center;
-  border:1px solid #bcbcbc;
+/*Estilos para el formulario de contacto*/
+.main{
+  /*Sección principal - fondo y título*/
+  .secPrinc{
+    color: white;
+    background: linear-gradient(to right top, #0000008a, #0000008a), url(../img/form1.png);
+    background-size: cover;
+    background-position: center;
+    height: 87vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: auto;
+
+    .tituloPrincipal{
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    /*Estilos del formulario*/
+    .form {
+      font-size: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    /* Estilos para los inputs */
+    .form input[type="text"],
+    .form input[type="email"] {
+      margin-bottom: 1rem; /* Espacio entre elementos */
+      padding: 0.5rem; /* Espaciado interno */
+      border: 1px solid #050A1E; /* Borde azul */
+      border-radius: 5px; /* Bordes redondeados */
+      width: 300px; /* Ancho de las cajas */
+    }
+
+    .form textarea{
+      margin-top: 0.5rem;
+      margin-bottom: 1rem; /* Espacio entre elementos */
+      padding: 0.5rem; /* Espaciado interno */
+      border: 1px solid #050A1E; /* Borde gris */
+      border-radius: 5px; /* Bordes redondeados */
+      width: 500px; /* Ancho de las cajas */
+      height: 130px;
+    }
+
+    /* Estilos para el botón */
+    .form button {
+      margin-bottom: 1rem; /* Espacio entre elementos */
+      padding: 0.5rem; /* Espaciado interno */
+      border: 1px solid #050A1E; /* Borde gris */
+      border-radius: 5px; /* Bordes redondeados */
+      width: 300px; /* Ancho de las cajas */
+      font-size: 1rem;
+      background-color: #0A2E89; /* Color de fondo */
+      color: white; /* Color del texto */
+      border: 1px solid #000; /* Sin borde */
+      cursor: pointer; /* Cambia el cursor al pasar por encima */
+      transition: background-color 0.3s; /* Transición suave al pasar por encima */
+    }
+    
+    /* Cambia el color de fondo al pasar el cursor en el botón "enviar"*/
+    .form button:hover {
+      background-color: #3ED4EB; 
+      color: #050A1E;
+    }
+
+    /* Estilos para que los inputs estén al lado de los labels*/
+      .form-row{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 2.5rem; /* Espacio entre label y input */
+      }
+
+      /* Ancho fijo para las etiquetas para alineación de los inputs*/
+      .form-row label {
+        width: 100px;
+      }
+  }
+  .asterisco{
+    color: white;
+    margin-left: 0.25rem; /* Espacio entre el label y el asterisco */
+  }
+
+  .descripcionAsterisco{
+    font-size: small;
+  }
+
+  /* Contador de caracteres */
+  #caracteresRestantes {
+    font-size: 0.9rem;
+    color: #050A1E;
+    margin-top: -48px; /* Ajusta este valor según sea necesario para el espacio */
+    margin-bottom: 30px;
+    margin-right: -300px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+  }
 }
 
-.cotizacionOficial{
-  width:320px;
-  height:260px;
-  border-radius:10px;
-  box-shadow:2px 4px 4px rgb(0 0 0 / 25%);
-  display:flex;
-  justify-content:center;
-  border:1px solid #bcbcbc;
-}*/
+/* Estilos para la página Sobre Nosotros */
+.main{
+  .sectionNosotros{
+    background: url(../img/nosotros.gif);
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+
+    .grilla{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 2.5rem;
+    }
+      .descripcionNos{
+        grid-column: 1/2;
+        font-size: medium;
+        text-align: justify;
+        color: #050A1E;
+        margin-top: 120px;
+        margin-left: 50px;
+      }
+
+      .redesSociales{
+        grid-column: 2/3;
+        font-size: larger;
+        color: #0A2E89;
+        margin-top: 120px;
+        margin-left: 180px;
+        transform: rotate(11deg); /* Ajusta el ángulo según tus necesidades */
+      
+        .iconosRRSS{
+          display: flex;
+          color: #0A2E89;
+          flex-direction: row;
+          align-items: center;
+          height: 150px;
+          text-decoration: none;
+          font-size: 5rem;
+          margin: 0 50px;
+
+          .descripcionRed{
+            font-size: small;
+            align-items: center;
+            margin-top: 15px;
+          }
+        }
+      }
+  }
+}
+
+/* Estilos para la pagina Nuestros Productos */
+.main{
+  .sectionProductos{
+    background: linear-gradient(to right top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../img/products.png);
+    background-size: contain;
+    background-position: justify;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #0A2E89;
+
+    .tituloProductos{
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .descTitProductos{
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: #0A2E89;
+      margin-bottom: 1rem;
+      margin-top: 30px;
+      background-color: #3ED4EB;
+      padding: 3px;
+      border-radius: 8px;
+    }
+
+    .productosContainer, .productosContainer2 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .producto {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      width: 200px;
+      text-align: center;
+      box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+  
+      h2 {
+        font-size: 1.5rem;
+        margin: 10px 0;
+      }
+  
+      p {
+        font-size: 1rem;
+        color: #666;
+      }
+    }
+
+    /*Estilos de las cotizaciones dólar*/
+    .cotizacionBlue, .cotizacionOficial{
+      width:320px;
+      height:260px;
+      border-radius:10px;
+      box-shadow:2px 4px 4px rgb(0 0 0 / 25%);
+      display:flex;
+      justify-content:center;
+      border:1px solid #bcbcbc;
+      overflow: hidden;
+    }
+
+    .destacado {
+      display: flex;
+      padding: 20px;
+      background-color: white;
+      border: 2px solid #050A1E;
+      border-radius: 10px;
+      width: 800px;
+      box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+
+      h2{
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 15px 0;
+      }
+
+      img{
+        margin-left: 20px;
+        max-width: 33%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      h5{
+        color: #0A2E89;
+        margin-left: 40%;
+        margin-right: 10px;
+        margin-top: -50%;
+        margin-bottom: 10px;
+        text-align: justify;
+        font-size: 15px;
+      }
+
+      p{
+        font-size: 1.2rem;
+        color: #333;
+        text-align: center;
+        margin-left: 35%;
+      }
+    }
+  }
+}
+
+/* Estilos para la página Blog */
+.main{
+  .sectionBlog{
+    color: #050A1E;
+    background: linear-gradient(to right top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../img/blog1.png);
+    background-size: cover;
+    min-height: 90vh;
+    overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+
+    img{
+      display: flex;
+    }
+
+    .fila1{
+      display: flex;
+      padding: 8px;
+      font-size: 1rem;
+      background-color: #0A2E89;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+
+      .listaBlog{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        gap: 10px;
+  
+        .listaItem{
+          margin-right: 20px;
+  
+          .linkNav{
+            font-size: 1.1 rem;
+            padding: 0.5 rem 1 rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border: 10px solid transparent;
+  
+            transition: transform 0.3s, box-shadow 0.3s;
+  
+            &:hover{
+              transform: scale(0.95);
+              box-shadow: 0 0 20px rgba(62, 212, 235, 0.9);
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    .fila2{
+      display: grid;
+      grid-template-columns: 70% 30%; /* Divide el contenedor en 3 columnas del mismo ancho */
+      text-align: center;
+
+      .entradaDestacada{
+        grid-column: 1/2;
+        background: linear-gradient(to right top, rgba(212, 209, 252, 0.795), rgba(212, 209, 252, 0.795));
+        border: 1px solid #ddd;
+        margin: 8px 0;
+        text-align: center;
+        display: grid;
+
+        img {
+          max-width: 30%;
+          height: auto;
+        }
+
+        p {
+          margin: 2px 0;
+          text-align: center;
+          margin-top: -50px;
+        }
+
+        button {
+          background-color: #007BFF;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          cursor: pointer;
+        }
+
+        button:hover {
+          background-color: #0056b3;
+        }
+      }
+
+      .info{
+        grid-column: 2/3;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(240, 255, 249);
+
+        h4{
+          font-size: 1rem;
+        }
+
+        a{
+          color: #0A2E89;
+        }
+      }
+    }
+
+    .fila3{
+      display: grid;
+      grid-template-columns: 10% 80% 10%; /* Divide el contenedor en 3 columnas del mismo ancho */
+      align-items: center;
+      text-align: center;
+
+      .columna1{
+        color: #000;
+        grid-column: 1/2;
+        background-color: #666;
+      }
+
+      .columna2{
+        color: #000;
+        grid-column: 2/3;
+        background-color: #3ED4EB;
+
+        /* Estilos para las entradas */
+        .entrada {
+          border: 1px solid #ddd;
+          padding: 16px;
+          margin: 16px 0;
+          background-color: #f9f9f9;
+        }
+
+        .entrada h3 {
+          margin: 0;
+          font-size: 1.5em;
+        }
+
+        .entrada p {
+          margin: 8px 0;
+          color: #666;
+        }
+
+        .entrada button {
+          background-color: #007BFF;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          cursor: pointer;
+        }
+
+        .entrada button:hover {
+          background-color: #0056b3;
+        }
+      }
+
+      .columna3{
+        color: #000;
+        grid-column: 3/4;
+        background-color: #ff0000;
+      }
+
+    }
+  }
+}
+
+/* Estilos para Registro */
+.mainR{
+  background: linear-gradient(to right top, #0000008a, #0000008a), url(../img/fondoIS.png);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+
+  .sectionRegistrarse{
+    background: linear-gradient(to right top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../img/registro.png);
+    background-size: 230%;
+    background-position: 9%;
+    height: 90vh;
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .tituloRegistro{
+      font-size: 3rem;
+      margin-bottom: 30px;
+      color: #050A1E;
+    }
+
+    form{
+
+      input:not(.check, .boton), select {
+        width: 100%;
+        margin-bottom: 15px;
+        height: 0px;
+        padding: 20px 40px;
+        font-size: 1.2rem;
+        border-radius: 20px;
+        color: #0A2E89;
+      }
+
+      ::placeholder{
+        color: grey;
+      }
+
+      .error input:not(.check, .boton), .error select {
+        border: 2px solid #ff0000;
+      }
+
+      .error-text {
+        color: #ff0000;
+        font-size: 0.8rem;
+        margin-top: 0px;
+        margin-bottom: 10px;
+      }
+
+      h4{
+        text-align: center;
+        font-size: 1rem;
+        margin-top: 5px; /* Espacio superior */
+        margin-bottom: 10px; /* Espacio inferior */
+      }
+
+      .perfiles {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center; /* Centramos los botones */
+        gap: 50px; /* Espaciado entre los botones */
+        position: relative;
+        
+        /* Estilos personalizados para el checkbox */
+        .custom-radio {
+          position: absolute;
+          opacity: 0;
+        }
+        
+        /* Estilos para el label */
+        .custom-radio + .textoPerfil {
+          cursor: pointer;
+        }
+        
+        .custom-radio + .textoPerfil::before {
+          content: '';
+          display: block;
+          margin: 0 auto; /* Centra el botón */
+          width: 18px;
+          height: 18px;
+          border: 2px solid #0A2E89;
+          border-radius: 50%;
+          background: white;
+        }
+        
+        .custom-radio:checked + .textoPerfil::before {
+          background-color: #0A2E89;
+        }
+
+        .error-text {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          color: #ff0000;
+          font-size: 0.8rem;
+          margin-top: 5px;
+      }
+      }
+
+      .terminos {
+        font-size: 0.8rem;
+        margin-bottom: 20px;
+        margin-top: -10px; /* Espacio superior */
+
+        /* Estilos para el label */
+        .custom-checkbox + .textoCheck {
+          cursor: pointer;
+        }
+        
+        .custom-checkbox + .textoCheck::before {
+          content: '';
+          display: inline-block; /* Cambiamos a inline-block */
+          width: 10px;
+          height: 10px;
+          border: 2px solid #0A2E89;
+          border-radius: 3px;
+          background: white;
+          margin-right: 5px; /* Espacio entre el checkbox y el texto */
+        }
+        
+        .custom-checkbox:checked + .textoCheck::before {
+          background-color: #0A2E89;
+        }
+      }
+
+      .boton{
+        width: 90%;
+        box-sizing: content-box;
+        background-color: #0A2E89;
+        border: 2px solid #050A1E;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer; /* Cambia el cursor al pasar por encima */
+        transition: background-color 0.3s; /* Transición suave al pasar por encima */
+        margin-bottom: 20px;
+      }
+      
+      /* Cambia el color de fondo al pasar el cursor en el botón "enviar"*/
+      .boton:hover {
+        background-color: #3ED4EB; 
+        color: #050A1E;
+      }
+
+      p{
+        font-size: small;
+        margin-top: -10px;
+      }
+      
+      .inicioS{
+        color: #0A2E89;
+      }
+    }
+  }
+}
+
+/* Estilos para Inicio de Sesión */
+.mainIC{
+  background: linear-gradient(to right top, #0000008a, #0000008a), url(../img/fondoIS.png);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+
+  .sectionInicioSesion{
+    background: linear-gradient(to right top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../img/sesion.gif);
+    background-size: 230%;
+    background-position: 9%;
+    height: 90vh;
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .tituloInicioSesion{
+      font-size: 3rem;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      color: #050A1E;
+    }
+
+    form{
+
+      input:not(.check, .boton), select {
+        width: 100%;
+        margin-bottom: 20px;
+        height: 0px;
+        padding: 20px 40px;
+        font-size: 1.2rem;
+        border-radius: 20px;
+        color: #0A2E89;
+      }
+
+      ::placeholder{
+        color: grey;
+      }
+
+      .error input:not(.check, .boton), .error select {
+        border: 2px solid #ff0000;
+      }
+
+      .error-text {
+        color: #ff0000;
+        font-size: 0.8rem;
+        margin-top: 0px;
+        margin-bottom: 10px;
+      }
+
+      .boton{
+        width: 90%;
+        box-sizing: content-box;
+        background-color: #0A2E89;
+        border: 2px solid #050A1E;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer; /* Cambia el cursor al pasar por encima */
+        transition: background-color 0.3s; /* Transición suave al pasar por encima */
+        margin-bottom: 20px;
+      }
+      
+      /* Cambia el color de fondo al pasar el cursor en el botón "enviar"*/
+      .boton:hover {
+        background-color: #3ED4EB; 
+        color: #050A1E;
+      }
+
+      .registro{
+        color: #0A2E89;
+        label[for="registro"] {
+          color: #050A1E;
+        }
+      }
+
+      .recordarme {
+        font-size: 1rem;
+        margin-top: -40px;
+        margin-bottom: 30px;
+        color: #050A1E;
+
+        /* Estilos para el label */
+        .custom-checkbox + .textoCheck {
+          cursor: pointer;
+        }
+        
+        .custom-checkbox + .textoCheck::before {
+          content: '';
+          display: inline-block; /* Cambiamos a inline-block */
+          width: 10px;
+          height: 10px;
+          border: 2px solid #0A2E89;
+          border-radius: 3px;
+          background: white;
+          margin-right: 5px; /* Espacio entre el checkbox y el texto */
+        }
+        
+        .custom-checkbox:checked + .textoCheck::before {
+          background-color: #0A2E89;
+        }
+      }
+
+      /* Estilos para el enlace "Olvidé mi contraseña" */
+      .forgotPassword {
+          display: block;
+          margin-bottom: 20px;
+          color: #0A2E89;
+      }
+      .forgotPassword:hover {
+          text-decoration: underline;
+      }
+      /* Estilo para el mensaje de recuperación de la contraseña */
+      .mensjRecu{
+        display: flex;
+        text-align: center;
+        color: #050A1E;
+        background-color: #3ED4EB;
+        font-size: 1.2rem;
+        padding: 10px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+/* Estilos para el Footer */

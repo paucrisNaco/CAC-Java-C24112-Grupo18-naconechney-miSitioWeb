@@ -26,7 +26,7 @@
                     <li class="listaItem"><a href="blog.html" class="linkNav">Blog</a></li>
                     <li class="listaItem"><a href="nuestrosProductos.html" class="linkNav">Nuestros Productos</a></li>
                     <li class="listaItem"><a href="sobreNosotros.html" class="linkNav">Sobre Nosotros</a></li>
-                    <li class="listaItem"><a href="formContacto.html" class="linkNav">Contáctanos</a></li>
+                    <li class="listaItem"><a href="formContacto.html" class="linkNav" id="contactoEnlace">Contáctanos</a></li>
                     <li class="listaItem"><a href="registrarse.html" class="linkNav">Registrate</a></li>
                     <li class="listaItem"><a href="inicioSesion.html" class="linkNav iniciarSesion">Inicia Sesión</a></li>
                 </ul>
@@ -35,28 +35,27 @@
 
         <!--Sección principal-->
         <main id="main" class="main">
-            <section class="sectionPrincipal">
-                <h1 class="tituloPrincipal"><b>Anota tus Sueños.</b></h1>
-                <br>
-                <h2 class="subtituloPrincipal"><b>Explora, Inspírate y Conecta.</b></h2>
-                <br>
-                <!--Sección para explicar de qué va el sitio-->
-                <p class="descripcionBottom">Descubre una amplia selección de modelos de libretas, sumérgete en tus Fanfics favoritos, comparte con la comunidad Paper, mantente al día con nuestro newsletter y ponte en contacto con nosotros para cualquier consulta.</p>
-                <!--Circulos con el nombre de cada página para ingresar-->
-                <div>
-                    <a href="blog.html">Blog</a>
-                    <a href="nuestrosProductos.html">Nuestros Productos</a>
-                    <a href="formContacto.html">Contáctanos</a>
-                    <a href="registrarse.html">Registrate</a>
+            <section class="sectionProductos">
+                <!-- Acá van los productos -->
+                <h1 class="tituloProductos">Nuestros productos</h1>
+                <h3 class="descTitProductos">↓ - Producto Destacado - ↓</h3>
+                <div class="productosContainer2">
+                    <div class="destacado"></div> <!-- Contenedor para el producto destacado -->
+                    <div class="cotizaciones"> <!--Cotizaciones Dólar que quiero poner en la página de productos-->
+                        <iframe class="cotizacionBlue" src="https://dolarhoy.com/i/cotizaciones/dolar-blue" frameborder="0"></iframe>
+                        <iframe class="cotizacionOficial" src="https://dolarhoy.com/i/cotizaciones/dolar-bancos-y-casas-de-cambio" frameborder="0"></iframe>
+                    </div>
                 </div>
+                <h3 class="descTitProductos">↓ Aquí encontrarás todos los modelos de libretas disponibles ↓</h3>
+                <div class="productosContainer"></div> <!-- Contenedor para los productos -->
             </section>
-        </main>
-        
+        </main>  
+          
         <footer>
             <small>© 2020 <code translate="no">Pen & Paper Passion. Anota tus sueños.</span></code>
         </footer>
 
+        <!-- Script para conectar con el archivo productos.js-->
+        <script src="js/productos.js"></script>
     </body>
 </html>
-
-
