@@ -134,3 +134,28 @@ function verEntrada(id) {
     // Redireccionar a la página de la entrada con el ID correspondiente
     window.location.href = `entrada.html?id=${id}`;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Obtener la URL de la página actual
+    const currentPageUrl = window.location.href;
+
+    // Obtener todos los enlaces del menú
+    const menuLinks = document.querySelectorAll('.listaMenu .linkNav');
+
+    // Iterar sobre cada enlace del menú
+    menuLinks.forEach(link => {
+        // Obtener la URL de cada enlace del menú
+        const linkUrl = link.href;
+
+        // Verificar si la URL del enlace coincide con la URL de la página actual
+        if (currentPageUrl === linkUrl) {
+            // Agregar una clase "active-link" al enlace del menú actual
+            link.classList.add('active-link');
+            // Remover el estilo text-decoration: none
+            link.style.textDecoration = 'underline';
+        } else {
+            // Agregar el estilo text-decoration: none para los enlaces que no están activos
+            link.style.textDecoration = 'none';
+        }
+    });
+});
