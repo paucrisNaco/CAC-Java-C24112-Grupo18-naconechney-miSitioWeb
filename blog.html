@@ -49,14 +49,14 @@
                             <li class="listaItem"><a href="libretas.html" class="linkNav">Libretas</a></li>
                             <li class="listaItem"><a href="otros.html" class="linkNav">Otros</a></li>
                             <li class="listaItem"><a href="acercaDe.html" class="linkNav">Acerca de</a></li>
-                            <li class="listaItem"><a href="" class="linkNav linkMisEntradas">Mis entradas</a></li>
-                            <li class="listaItem"><a href="#" class="linkNav linkNuevaEntrada">Nueva entrada</a></li>
+                            <li class="listaItem"><a href="entrada.html" class="linkNav linkMisEntradas">Mis entradas</a></li>
+                            <li class="listaItem"><a href="nuevaEntrada.html" class="linkNav linkNuevaEntrada">Nueva entrada</a></li>
                         </ul>
                     </nav>
                 </section>
                 <section class="fila2">
                     <div class="entradaDestacada">
-                        <h2>Entrada Destacada</h2>
+                        <h2>Título de Entrada Destacada</h2>
                         <img src="img/entradaDestacada.png" alt="Imagen de la entrada destacada" id="imagenDestacada">
                         <p id="resumenDestacada">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur alias voluptates animi unde facilis, est similique esse asperiores amet ipsam corporis quod dolorum quis libero officiis repellendus nulla maxime dolores sapiente excepturi placeat! Dicta sapiente quae maiores consectetur explicabo ad, minus iure accusamus, quisquam, dolor laboriosam numquam atque possimus excepturi rerum nisi? Quos perferendis, quas reiciendis numquam culpa eaque sit modi fugit rem suscipit repudiandae quod autem similique ipsam nemo esse tenetur magni asperiores alias exercitationem, eveniet, mollitia eius distinctio. Quae assumenda quod nostrum consequuntur ipsam at quaerat expedita recusandae neque modi inventore, veritatis magni a excepturi dolor, in ab.</p>
                         <button id="verMasDestacada">Ver más</button>
@@ -78,46 +78,181 @@
                 </section>
                 <section class="fila3">
                     <section class="columna1">
-                        <div class="">
+                        <div class="menuPerfil">
                             <!-- Contenido de la columna 1 (Archivos, seguidores, etc.) -->
-                            <h5>Contenido de la columna 1</h5>
-                            <h6>Archivos</h6>
-                            <li class="listaItem linkNav seguidores" style="display: none;"><a href="#">Seguidores</a></li>
-                            <li class="listaItem linkNav notificaciones" style="display: none;"><a href="#">Notificaciones</a></li>
-                            <li class="listaItem linkNav commentSection" style="display: none;"><a href="#">Comentarios</a></li>
-                            <img src="" alt="foto del perfil del usuario" class="linkNav miPerfil" style="display: none;">
-                            <li class="listaItem linkNav miPerfil" style="display: none;"><a href="#">Mi perfil</a></li>
+                            <div class="deco">Ƹ̵̡Ӝ̵̨̄Ʒ</div>
+                            <h4>Usuario</h4>
+                            <img src="img/logo60x60SF.png" alt="foto del perfil del usuario" class="fotoPerfil">
+                            <a href="#" class="linkNav miPerfil">-- Mi perfil --</a>
+                            <li class="listaPerfil" ><a href="#" class="linkNav">»Notificaciones</a></li>
+                            <li class="listaPerfil" ><a href="#" class="linkNav">»Comentarios</a></li>
+                            <li class="listaPerfil" ><a href="#" class="linkNav">»Favoritos</a></li>
+                            <li class="listaPerfil" ><a href="#" class="linkNav">»Archivos</a></li>
+                            <li class="listaPerfil" ><a href="#" class="linkNav">»Seguidores</a></li>
+                            <div class="deco">Ƹ̵̡Ӝ̵̨̄Ʒ</div>
+                        </div>
+                        <div class="deco">Ƹ̵̡Ӝ̵̨̄Ʒ</div>
+                        <div class="publicidad1">
+                            <a href="formContacto.html"><img alt="espacio para publicidad" src="img/publicidad2.png"></a>
+                            <div class="deco">Ƹ̵̡Ӝ̵̨̄Ʒ</div>
+                            <a href="formContacto.html"><img alt="espacio para publicidad" src="img/publicidad1.png"></a>
+                            <div class="deco">Ƹ̵̡Ӝ̵̨̄Ʒ</div>
                         </div>
                     </section>
                     <section class="columna2">
                         <div class="contenedorEntradas"> <!-- El contenedor debe estar vacío ya que se traerán los datos desde la base de datos-->
                             <!-- Ejemplos para la parte visual de las entradas-->
                             <!-- Entrada 1 -->
-                            <div class="entrada">
+                            <div class="entrada" data-fecha="5 de junio de 2024" data-autor="Usuario123">
+                                <img src="img/entradaDestacada.png" alt="Imagen de la entrada destacada" id="imagenDestacada">
                                 <h3>Entrada Reciente 1</h3>
-                                <p>Resumen de la entrada reciente 1...</p>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, laborum cumque doloremque odio fugiat eum delectus nesciunt ipsam, a, voluptates amet aspernatur dolore illum dolor reiciendis doloribus nulla suscipit architecto. Minima officiis suscipit inventore facilis, nemo facere aliquam pariatur amet eum non exercitationem voluptates corporis harum, consequuntur odit enim similique magni. Reprehenderit, officiis quam. Voluptatum ipsa esse neque recusandae numquam placeat temporibus commodi, saepe beatae consectetur maiores corporis eaque repellendus ducimus magni dignissimos voluptatibus. Odit iste laborum labore, ab dicta possimus modi. Itaque, eum ut ducimus saepe magnam reiciendis esse assumenda vero cum dicta placeat maiores! Facilis blanditiis dolor nisi!</p>
                                 <button>Leer más</button>
+                                <div class="metadatos">
+                                    <span>Publicado el <span class="fecha-publicacion"></span> por <a href="#" class="autor"></a></span>
+                                </div>
+                                <div class="interacciones">
+                                    <span>Likes: &#128077; 100</span> <!-- Ejemplo: 100 likes -->
+                                    <span>Comentarios: 💬 50</span> <!-- Ejemplo: 50 comentarios -->
+                                    <i class="far fa-heart favorito-icon"></i><!-- Botón para añadir a favoritos -->
+                                </div>
                             </div>
                             <!-- Entrada 2 -->
-                            <div class="entrada">
+                            <div class="entrada" data-fecha="5 de junio de 2024" data-autor="Usuario123">
+                                <img src="img/entradaDestacada.png" alt="Imagen de la entrada destacada" id="imagenDestacada">
                                 <h3>Entrada Reciente 2</h3>
-                                <p>Resumen de la entrada reciente 2...</p>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, laborum cumque doloremque odio fugiat eum delectus nesciunt ipsam, a, voluptates amet aspernatur dolore illum dolor reiciendis doloribus nulla suscipit architecto. Minima officiis suscipit inventore facilis, nemo facere aliquam pariatur amet eum non exercitationem voluptates corporis harum, consequuntur odit enim similique magni. Reprehenderit, officiis quam. Voluptatum ipsa esse neque recusandae numquam placeat temporibus commodi, saepe beatae consectetur maiores corporis eaque repellendus ducimus magni dignissimos voluptatibus. Odit iste laborum labore, ab dicta possimus modi. Itaque, eum ut ducimus saepe magnam reiciendis esse assumenda vero cum dicta placeat maiores! Facilis blanditiis dolor nisi!</p>
                                 <button>Leer más</button>
+                                <div class="metadatos">
+                                    <span>Publicado el <span class="fecha-publicacion"></span> por <a href="#" class="autor"></a></span>
+                                </div>
+                                <div class="interacciones">
+                                    <span>Likes: &#128077; 100</span> <!-- Ejemplo: 100 likes -->
+                                    <span>Comentarios: 💬 50</span> <!-- Ejemplo: 50 comentarios -->
+                                    <i class="far fa-heart favorito-icon"></i><!-- Botón para añadir a favoritos -->
+                                </div>
                             </div>
                             <!-- Entrada 3 -->
-                            <div class="entrada">
+                            <div class="entrada" data-fecha="5 de junio de 2024" data-autor="Usuario123">
+                                <img src="img/entradaDestacada.png" alt="Imagen de la entrada destacada" id="imagenDestacada">
                                 <h3>Entrada Reciente 3</h3>
-                                <p>Resumen de la entrada reciente 3...</p>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, laborum cumque doloremque odio fugiat eum delectus nesciunt ipsam, a, voluptates amet aspernatur dolore illum dolor reiciendis doloribus nulla suscipit architecto. Minima officiis suscipit inventore facilis, nemo facere aliquam pariatur amet eum non exercitationem voluptates corporis harum, consequuntur odit enim similique magni. Reprehenderit, officiis quam. Voluptatum ipsa esse neque recusandae numquam placeat temporibus commodi, saepe beatae consectetur maiores corporis eaque repellendus ducimus magni dignissimos voluptatibus. Odit iste laborum labore, ab dicta possimus modi. Itaque, eum ut ducimus saepe magnam reiciendis esse assumenda vero cum dicta placeat maiores! Facilis blanditiis dolor nisi!</p>
                                 <button>Leer más</button>
+                                <div class="metadatos">
+                                    <span>Publicado el <span class="fecha-publicacion"></span> por <a href="#" class="autor"></a></span>
+                                </div>
+                                <div class="interacciones">
+                                    <span>Likes: &#128077; 100</span> <!-- Ejemplo: 100 likes -->
+                                    <span>Comentarios: 💬 50</span> <!-- Ejemplo: 50 comentarios -->
+                                    <i class="far fa-heart favorito-icon"></i><!-- Botón para añadir a favoritos -->
+                                </div>
                             </div>
+                            <!-- Entrada 4 -->
+                            <div class="entrada" data-fecha="5 de junio de 2024" data-autor="Usuario123">
+                                <img src="img/entradaDestacada.png" alt="Imagen de la entrada destacada" id="imagenDestacada">
+                                <h3>Entrada Reciente 4</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, laborum cumque doloremque odio fugiat eum delectus nesciunt ipsam, a, voluptates amet aspernatur dolore illum dolor reiciendis doloribus nulla suscipit architecto. Minima officiis suscipit inventore facilis, nemo facere aliquam pariatur amet eum non exercitationem voluptates corporis harum, consequuntur odit enim similique magni. Reprehenderit, officiis quam. Voluptatum ipsa esse neque recusandae numquam placeat temporibus commodi, saepe beatae consectetur maiores corporis eaque repellendus ducimus magni dignissimos voluptatibus. Odit iste laborum labore, ab dicta possimus modi. Itaque, eum ut ducimus saepe magnam reiciendis esse assumenda vero cum dicta placeat maiores! Facilis blanditiis dolor nisi!</p>
+                                <button>Leer más</button>
+                                <div class="metadatos">
+                                    <span>Publicado el <span class="fecha-publicacion"></span> por <a href="#" class="autor"></a></span>
+                                </div>
+                                <div class="interacciones">
+                                    <span>Likes: &#128077; 100</span> <!-- Ejemplo: 100 likes -->
+                                    <span>Comentarios: 💬 50</span> <!-- Ejemplo: 50 comentarios -->
+                                    <i class="far fa-heart favorito-icon"></i><!-- Botón para añadir a favoritos -->
+                                </div>
+                            </div>
+                            <!-- Entrada 5 -->
+                            <div class="entrada" data-fecha="5 de junio de 2024" data-autor="Usuario123">
+                                <img src="img/entradaDestacada.png" alt="Imagen de la entrada destacada" id="imagenDestacada">
+                                <h3>Entrada Reciente 5</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, laborum cumque doloremque odio fugiat eum delectus nesciunt ipsam, a, voluptates amet aspernatur dolore illum dolor reiciendis doloribus nulla suscipit architecto. Minima officiis suscipit inventore facilis, nemo facere aliquam pariatur amet eum non exercitationem voluptates corporis harum, consequuntur odit enim similique magni. Reprehenderit, officiis quam. Voluptatum ipsa esse neque recusandae numquam placeat temporibus commodi, saepe beatae consectetur maiores corporis eaque repellendus ducimus magni dignissimos voluptatibus. Odit iste laborum labore, ab dicta possimus modi. Itaque, eum ut ducimus saepe magnam reiciendis esse assumenda vero cum dicta placeat maiores! Facilis blanditiis dolor nisi!</p>
+                                <button>Leer más</button>
+                                <div class="metadatos">
+                                    <span>Publicado el <span class="fecha-publicacion"></span> por <a href="#" class="autor"></a></span>
+                                </div>
+                                <div class="interacciones">
+                                    <span>Likes: &#128077; 100</span> <!-- Ejemplo: 100 likes -->
+                                    <span>Comentarios: 💬 50</span> <!-- Ejemplo: 50 comentarios -->
+                                    <i class="far fa-heart favorito-icon"></i><!-- Botón para añadir a favoritos -->
+                                </div>
+                            </div>
+                            <!-- Entrada 6 -->
+                            <div class="entrada" data-fecha="5 de junio de 2024" data-autor="Usuario123">
+                                <img src="img/entradaDestacada.png" alt="Imagen de la entrada destacada" id="imagenDestacada">
+                                <h3>Entrada Reciente 6</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, laborum cumque doloremque odio fugiat eum delectus nesciunt ipsam, a, voluptates amet aspernatur dolore illum dolor reiciendis doloribus nulla suscipit architecto. Minima officiis suscipit inventore facilis, nemo facere aliquam pariatur amet eum non exercitationem voluptates corporis harum, consequuntur odit enim similique magni. Reprehenderit, officiis quam. Voluptatum ipsa esse neque recusandae numquam placeat temporibus commodi, saepe beatae consectetur maiores corporis eaque repellendus ducimus magni dignissimos voluptatibus. Odit iste laborum labore, ab dicta possimus modi. Itaque, eum ut ducimus saepe magnam reiciendis esse assumenda vero cum dicta placeat maiores! Facilis blanditiis dolor nisi!</p>
+                                <button>Leer más</button>
+                                <div class="metadatos">
+                                    <span>Publicado el <span class="fecha-publicacion"></span> por <a href="#" class="autor"></a></span>
+                                </div>
+                                <div class="interacciones">
+                                    <span>Likes: &#128077; 100</span> <!-- Ejemplo: 100 likes -->
+                                    <span>Comentarios: 💬 50</span> <!-- Ejemplo: 50 comentarios -->
+                                    <i class="far fa-heart favorito-icon"></i><!-- Botón para añadir a favoritos -->
+                                </div>
+                            </div>
+                            <!-- Entrada 7 -->
+                            <div class="entrada" data-fecha="5 de junio de 2024" data-autor="Usuario123">
+                                <img src="img/entradaDestacada.png" alt="Imagen de la entrada destacada" id="imagenDestacada">
+                                <h3>Entrada Reciente 7</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, laborum cumque doloremque odio fugiat eum delectus nesciunt ipsam, a, voluptates amet aspernatur dolore illum dolor reiciendis doloribus nulla suscipit architecto. Minima officiis suscipit inventore facilis, nemo facere aliquam pariatur amet eum non exercitationem voluptates corporis harum, consequuntur odit enim similique magni. Reprehenderit, officiis quam. Voluptatum ipsa esse neque recusandae numquam placeat temporibus commodi, saepe beatae consectetur maiores corporis eaque repellendus ducimus magni dignissimos voluptatibus. Odit iste laborum labore, ab dicta possimus modi. Itaque, eum ut ducimus saepe magnam reiciendis esse assumenda vero cum dicta placeat maiores! Facilis blanditiis dolor nisi!</p>
+                                <button>Leer más</button>
+                                <div class="metadatos">
+                                    <span>Publicado el <span class="fecha-publicacion"></span> por <a href="#" class="autor"></a></span>
+                                </div>
+                                <div class="interacciones">
+                                    <span>Likes: &#128077; 100</span> <!-- Ejemplo: 100 likes -->
+                                    <span>Comentarios: 💬 50</span> <!-- Ejemplo: 50 comentarios -->
+                                    <i class="far fa-heart favorito-icon"></i><!-- Botón para añadir a favoritos -->
+                                </div>
+                            </div>
+                            <!-- Entrada 8 -->
+                            <div class="entrada" data-fecha="5 de junio de 2024" data-autor="Usuario123">
+                                <img src="img/entradaDestacada.png" alt="Imagen de la entrada destacada" id="imagenDestacada">
+                                <h3>Entrada Reciente 8</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, laborum cumque doloremque odio fugiat eum delectus nesciunt ipsam, a, voluptates amet aspernatur dolore illum dolor reiciendis doloribus nulla suscipit architecto. Minima officiis suscipit inventore facilis, nemo facere aliquam pariatur amet eum non exercitationem voluptates corporis harum, consequuntur odit enim similique magni. Reprehenderit, officiis quam. Voluptatum ipsa esse neque recusandae numquam placeat temporibus commodi, saepe beatae consectetur maiores corporis eaque repellendus ducimus magni dignissimos voluptatibus. Odit iste laborum labore, ab dicta possimus modi. Itaque, eum ut ducimus saepe magnam reiciendis esse assumenda vero cum dicta placeat maiores! Facilis blanditiis dolor nisi!</p>
+                                <button>Leer más</button>
+                                <div class="metadatos">
+                                    <span>Publicado el <span class="fecha-publicacion"></span> por <a href="#" class="autor"></a></span>
+                                </div>
+                                <div class="interacciones">
+                                    <span>Likes: &#128077; 100</span> <!-- Ejemplo: 100 likes -->
+                                    <span>Comentarios: 💬 50</span> <!-- Ejemplo: 50 comentarios -->
+                                    <i class="far fa-heart favorito-icon"></i><!-- Botón para añadir a favoritos -->
+                                </div>
+                            </div>
+                            <!-- Entrada 9 -->
+                            <div class="entrada" data-fecha="5 de junio de 2024" data-autor="Usuario123">
+                                <img src="img/entradaDestacada.png" alt="Imagen de la entrada destacada" id="imagenDestacada">
+                                <h3>Entrada Reciente 9</h3>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum nihil unde maiores quos nostrum! Consectetur corporis adipisci animi error repudiandae expedita at blanditiis possimus vitae vero hic cupiditate velit ipsum provident cum sapiente odio labore, culpa nobis modi voluptatum natus unde! Nostrum ex officiis ipsam mollitia reiciendis similique modi nam!</p>
+                                <button>Leer más</button>
+                                <div class="metadatos">
+                                    <span>Publicado el <span class="fecha-publicacion"></span> por <a href="#" class="autor"></a></span>
+                                </div>
+                                <div class="interacciones">
+                                    <span>Likes: &#128077; 100</span> <!-- Ejemplo: 100 likes -->
+                                    <span>Comentarios: 💬 50</span> <!-- Ejemplo: 50 comentarios -->
+                                    <i class="far fa-heart favorito-icon"></i><!-- Botón para añadir a favoritos -->
+                                </div>
+                            </div>       
                         </div>
                     </section>
                     <section class="columna3">
                         <!-- Columna 3 -->
                         <div class="containerCol3">
-                            <!-- Contenido de la columna 3 (Barra de búsqueda, menú) -->
-                            <h5>Contenido de la columna 3</h5>
-                            <nav class="menu">Menú
+                            <div class="deco">Ƹ̵̡Ӝ̵̨̄Ʒ</div>
+                            <div class="barra">
+                                <h5>Buscar en el sitio</h5>
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" id="campoBusqueda" type="search" placeholder="Search" aria-label="Search" oninput="buscarEnSitio()">
+                                    <button class="btn btn-outline-success" type="submit">🔍︎</button>
+                                </form>
+                            </div>
+                            <div class="deco">Ƹ̵̡Ӝ̵̨̄Ʒ</div>
+                            <nav class="menu">
+                                <h4>Menú</h4>
                                 <ul class="listaMenu">
                                     <li class="listaItem"><a href="index.html" class="linkNav">>Pág. Principal</a></li>
                                     <li class="listaItem">
@@ -135,8 +270,17 @@
                                     <li class="listaItem"><a href="nuestrosProductos.html" class="linkNav">>Nuestros Productos</a></li>
                                     <li class="listaItem"><a href="sobreNosotros.html" class="linkNav">>Sobre Nosotros</a></li>
                                     <li class="listaItem"><a href="formContacto.html" class="linkNav" id="contactoEnlace">>Contáctanos</a></li>
-                                  </ul>                                  
+                                </ul>                        
                             </nav>
+                            <div class="deco">Ƹ̵̡Ӝ̵̨̄Ʒ</div>
+                            <div class="publicidad1">
+                                <a href="formContacto.html"><img alt="espacio para publicidad" src="img/publicidad1.png"></a>
+                                <div class="deco">Ƹ̵̡Ӝ̵̨̄Ʒ</div>
+                                <a href="formContacto.html"><img alt="espacio para publicidad" src="img/publicidad2.png"></a>
+                                <div class="deco">Ƹ̵̡Ӝ̵̨̄Ʒ</div>
+                                <a href="formContacto.html"><img alt="espacio para publicidad" src="img/publicidad1.png"></a>
+                                <div class="deco">Ƹ̵̡Ӝ̵̨̄Ʒ</div>
+                            </div>
                         </div>
                     </section>
                 </section>

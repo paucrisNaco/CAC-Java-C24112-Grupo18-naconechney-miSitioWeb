@@ -1,29 +1,29 @@
-//Codigos para manejar el blog
-// Cargar completamente el DOM
-document.addEventListener('DOMContentLoaded', () => {
-    // Verificar el tipo de usuario
-    const userType = getUserType(); // Función para obtener el tipo de usuario (visitante, lector, publicador)
+// //Codigos para manejar el blog
+// // Cargar completamente el DOM
+// document.addEventListener('DOMContentLoaded', () => {
+//     // Verificar el tipo de usuario
+//     const userType = getUserType(); // Función para obtener el tipo de usuario (visitante, lector, publicador)
 
-    // Mostrar u ocultar elementos según el tipo de usuario
-    handleUserPermissions(userType);
+//     // Mostrar u ocultar elementos según el tipo de usuario
+//     handleUserPermissions(userType);
 
-    // Cargar la entrada destacada
-    cargarEntradaDestacada();
+//     // Cargar la entrada destacada
+//     cargarEntradaDestacada();
 
-    // Cargar todas las entradas del blog
-    cargarEntradas();
-});
+//     // Cargar todas las entradas del blog
+//     cargarEntradas();
+// });
 
-// Obtener la información del usuario desde localStorage
-function getUserType() {
-    const user = JSON.parse(localStorage.getItem('user'));
-    // Si no hay usuario, es un visitante
-    if (!user) {
-        return 'visitante';
-    }
-    // Retornar el rol del usuario ('lector' o 'publicador')
-    return user.role;
-}
+// // Obtener la información del usuario desde localStorage
+// function getUserType() {
+//     const user = JSON.parse(localStorage.getItem('user'));
+//     // Si no hay usuario, es un visitante
+//     if (!user) {
+//         return 'visitante';
+//     }
+//     // Retornar el rol del usuario ('lector' o 'publicador')
+//     return user.role;
+// }
 
 // Manejo de vistas por perfil
 function handleUserPermissions(userType) {
@@ -42,12 +42,12 @@ function handleUserPermissions(userType) {
         if (miPerfil) miPerfil.style.display = "none";
         if (seguidores) seguidores.style.display = "none";
     } else if (userType === 'lector') {
-        // Lector: ocultar enlace de nueva entrada, de mis entradas, seguidores, notificaciones y mi perfil
+        // Lector: ocultar enlace de nueva entrada, de mis entradas y seguidores
         if (newEntryLink) newEntryLink.style.display = 'none';
         if (myEntriesLink) myEntriesLink.style.display = "none";
         if (seguidores) seguidores.style.display = "none";
-        if (notificaciones) notificaciones.style.display = "none";
-        if (miPerfil) miPerfil.style.display = "none";
+        if (notificaciones) notificaciones.style.display = "block";
+        if (miPerfil) miPerfil.style.display = "bloc";
         if (commentSection) commentSection.style.display = 'block'; // Mostrar sección de comentarios
     } else if (userType === 'publicador') {
         // Publicador: mostrar todos los enlaces
@@ -135,6 +135,7 @@ function verEntrada(id) {
     window.location.href = `entrada.html?id=${id}`;
 }
 
+// Función para subrayar las distintas partes del submenú de la columna derecha
 document.addEventListener('DOMContentLoaded', () => {
     // Obtener la URL de la página actual
     const currentPageUrl = window.location.href;
@@ -159,3 +160,77 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Función de prueba para el serch de la barra de búsqueda
+function buscarEnSitio() {
+    // Obtener el valor ingresado en el campo de búsqueda
+    const searchTerm = document.getElementById('campoBusqueda').value.toLowerCase();
+
+    // Obtener todas las entradas del blog
+    const entradas = document.querySelectorAll('.entrada');
+
+    // Iterar sobre cada entrada y mostrar u ocultar según el término de búsqueda
+    entradas.forEach(entrada => {
+        const titulo = entrada.querySelector('h3').textContent.toLowerCase();
+        const resumen = entrada.querySelector('p').textContent.toLowerCase();
+
+        // Mostrar la entrada si el título o el resumen coinciden con el término de búsqueda
+        if (titulo.includes(searchTerm) || resumen.includes(searchTerm)) {
+            entrada.style.display = 'block';
+        } else {
+            entrada.style.display = 'none';
+        }
+    });
+}
+
+// Función para manejar el ancho de la imagen según la cantidad de palabras y el máximo de palabras del párrafo de la entrada
+document.querySelectorAll('.entrada').forEach(entrada => {
+    const paragraph = entrada.querySelector('p');
+    let text = paragraph.innerText;
+    const words = text.split(' ');
+    
+    if (words.length > 100) {
+        text = words.slice(0, 100).join(' ') + '...'; // Limita a 100 palabras
+    }
+    
+    paragraph.innerText = text; // Actualiza el texto del párrafo
+    
+    const wordCount = text.split(' ').length; // Cuenta las palabras después de truncar
+    const img = entrada.querySelector('img');
+    const baseSize = 20; // Base size in percentage
+
+    img.style.width = (baseSize + wordCount * 0.1) + '%'; // Ajusta el tamaño según sea necesario
+});
+
+// Función para manejar el evento click del corazón de favoritos
+document.querySelectorAll('.favorito-icon').forEach(icon => {
+    icon.addEventListener('click', function() {
+        if (this.classList.contains('far')) {
+            this.classList.remove('far');
+            this.classList.add('fas'); // Cambia el ícono a lleno
+        } else {
+            this.classList.remove('fas');
+            this.classList.add('far'); // Cambia el ícono a vacío
+        }
+    });
+});
+
+// Función para manejar la fecha de publicación y el nombre del autor
+document.querySelectorAll('.entrada').forEach(entrada => {
+    // Obtener la fecha y el autor de los atributos de datos
+    const fecha = entrada.getAttribute('data-fecha');
+    const autor = entrada.getAttribute('data-autor');
+    
+    // Mostrar la fecha y el autor en los metadatos
+    entrada.querySelector('.fecha-publicacion').textContent = fecha;
+    entrada.querySelector('.autor').textContent = autor;
+    
+    // Manejar clics en el nombre del autor (simulado)
+    entrada.querySelector('.autor').addEventListener('click', () => {
+        // Aquí puedes dirigir al usuario a la página del autor o realizar otra acción
+        console.log('Clic en el autor:', autor);
+    });
+});
+
+
+  
